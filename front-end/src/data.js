@@ -4,7 +4,7 @@ const data = {
             name: 'Beard Oil + Hyaluronic Serum',
             slug: 'beard-oil',
             category: 'Serums',
-            image: '/images/beard-oil-sample.png',
+            image: '/images/p2.png',
             price: 80,
             countInStock: 10,
             rating: '5',
@@ -15,7 +15,7 @@ const data = {
             name: 'Cherry Enzyme Wash',
             slug: 'cherry-enzyme-wash',
             category: 'Facewash',
-            image: '/images/cherry-enzyme-sample.png',
+            image: '/images/p1.png',
             price: 75,
             countInStock: 10,
             rating: '5',
@@ -26,7 +26,7 @@ const data = {
             name: 'Acne Wash',
             slug: 'acne-wash',
             category: 'Facewash',
-            image: '/images/acne-wash-sample.png',
+            image: '/images/p1.png',
             price: 75,
             countInStock: 20,
             rating: '5',
@@ -37,7 +37,7 @@ const data = {
             name: 'Ultra Firm Peptide',
             slug: 'ultra-firm-peptide',
             category: 'Cream',
-            image: '/images/peptide-sample.png',
+            image: '/images/p1.png',
             price: 100,
             countInStock: 30,
             rating: '5',
@@ -46,3 +46,5 @@ const data = {
         },
     ],
 }
+
+export default data;
