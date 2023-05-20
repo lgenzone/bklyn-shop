@@ -7,6 +7,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.navbar {
+  background-color: #474733;
+}
+
 .brand {
   color: white;
 }
@@ -17,11 +21,13 @@ body {
 
 main {
   flex: 1;
+  background-color: #EDEDE9;
 }
 
 .btn-primary {
-  background-color: #ffc000;
+  background-color: #ACAC9A;
   color: black;
+  border: none;
 }
 
 .products {
@@ -31,7 +37,7 @@ main {
 }
 
 .rating span {
-  color: #ffc000;
+  color: #ACAC9A;
 }
 
 .product {
