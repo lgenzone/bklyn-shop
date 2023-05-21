@@ -53,7 +53,7 @@ function HomeScreen() {
       <div className="products">
         {loading ? (
           <LoadingBox />
-        ) : error ? (
+        ) : error ? ( 
           <MessageBox variant="danger">{error}</MessageBox>
         ) : (
           <Row>
