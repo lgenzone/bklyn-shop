@@ -9,7 +9,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import { Link, useNavigate } from 'react-router-dom';
 import Button from 'react-bootstrap/esm/Button';
 import Card from 'react-bootstrap/esm/Card';
-import ListGroupItem from 'react-bootstrap/esm/ListGroupItem';
+
 
 export default function CartScreen() {
   const navigate = useNavigate();
