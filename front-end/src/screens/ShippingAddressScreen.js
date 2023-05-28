@@ -1,16 +1,53 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import { useNavigate } from 'react-router-dom';
+import { Store } from '../Store';
 
 export default function ShippingAddressScreen() {
+  const navigate = useNavigate();
+  const { state, dispatch: ctxDispatch } = useContext(Store);
+  const {
+    userInfo,
+    cart: { shippingAddress },
+  } = state;
+
   const [fullName, setFullName] = useState('');
   const [address, setAddress] = useState('');
   const [city, setCity] = useState('');
-  const [postalCode, setPostalCode] = useState('');
+  const [postalCode, setPostalCode] = useState(
+    shippingAddress.postalCode || ''
+  );
+  useEffect(() => {
+    if (!userInfo) {
+      navigate('/signin?redirect=/shipping');
+    }
+  }, [userInfo, navigate]);
   const [country, setCountry] = useState('');
   const submitHandler = (e) => {
     e.preventDefault();
+    ctxDispatch({
+      type: 'SAVE_SHIPPING_ADDRESS',
+      payload: {
+        fullName,
+        address,
+        city,
+        postalCode,
+        country,
+      },
+    });
+    localStorage.setItem(
+      'shippingAddress',
+      JSON.stringify({
+        fullName,
+        address,
+        city,
+        postalCode,
+        country,
+      })
+    );
+    navigate('/payment');
   };
 
   return (
