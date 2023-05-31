@@ -13,7 +13,7 @@ orderRouter.post(
       orderItems: req.body.orderItems.map((x) => ({ ...x, product: x._id })),
       shippingAddress: req.body.shippingAddress,
       paymentMethod: req.body.paymentMethod,
-      itemsPrice: req.body,itemsPrice,
+      itemsPrice: req.body.itemsPrice,
       shippingPrice: req.body.shippingPrice,
       taxPrice: req.body.taxPrice,
       totalPrice: req.body.totalPrice,
@@ -22,6 +22,19 @@ orderRouter.post(
 
     const order = await newOrder.save();
     res.status(201).send({ message: 'New Order Created', order });
+  })
+);
+
+orderRouter.get(
+  '/:id ',
+  isAuth,
+  expressAsyncHandler(async (req, res) => {
+    const order = await Order.findById(req.params.id);
+    if (order) {
+      res.send(order);
+    } else {
+      res.status(404).send({ message: 'Order Not Found' });
+    }
   })
 );
 
