@@ -90,7 +90,7 @@ function App() {
             </Routes>
           </Container>
         </main>
-        <footer>
+        <footer> 
           <div className="text-center">All rights reserved</div>
         </footer>
       </div>
