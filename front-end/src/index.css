@@ -8,7 +8,7 @@ body {
 }
 
 .navbar {
-  background-color: #4A4C43;
+  background-color: #3C433E;
 }
 
 .cart-link {
@@ -34,11 +34,11 @@ body {
 
 main {
   flex: 1;
-  background-color: #EDEDE9;
+  background-color: #DFE2DF;
 }
 
 .btn-primary {
-  background-color: #89937C;
+  background-color: #738277;
   color: black;
   border: none;
 }
@@ -50,7 +50,7 @@ main {
 }
 
 .rating span {
-  color: #ACAC9A;
+  color: #9E9B8D;
 }
 
 .product {
@@ -80,11 +80,11 @@ main {
 }
 
 .checkout-steps > div {
-  border-bottom: 0.2rem solid #4A4C43;
-  color: #4A4C43;
+  border-bottom: 0.2rem solid #3C433E;
+  color: #3C433E;
 }
 
 .checkout-steps > div.active {
-  border-bottom: 0.2rem solid #ACAC9A;
-  color: #ACAC9A;
+  border-bottom: 0.2rem solid #949E94;
+  color: #949E94;
 }

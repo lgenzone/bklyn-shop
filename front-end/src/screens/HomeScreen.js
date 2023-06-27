@@ -56,8 +56,9 @@ function HomeScreen() {
         className="p-5 text-center bg-image rounded-3"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1581182800629-7d90925ad072?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80')",
-          height: '600px',
+            "url('https://images.unsplash.com/photo-1612817288484-6f916006741a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')",
+          height: '400px',
+          
         }}
       >
         <div className="mask" style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
@@ -65,7 +66,7 @@ function HomeScreen() {
             <div className="text-white">
               <h1 className="mb-3">Welcome to BKLYN</h1>
               <h4 className="mb-3">
-                add something here that invites user to start shoppping
+                add something here that invites user to start shopping
                 "discover latest products..."
               </h4>
               <Button variant="outline-light" size="lg" href="#!" role="button">
