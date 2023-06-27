@@ -3,6 +3,8 @@ import { useEffect, useReducer } from 'react';
 import axios from 'axios';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Button from 'react-bootstrap/Button';
 import Product from '../components/Product';
 import { Helmet } from 'react-helmet-async';
 import LoadingBox from '../components/LoadingBox';
@@ -49,6 +51,32 @@ function HomeScreen() {
       <Helmet>
         <title>bklyn</title>
       </Helmet>
+      {/* Hero */}
+      <div
+        className="p-5 text-center bg-image rounded-3"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1581182800629-7d90925ad072?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80')",
+          height: '600px',
+        }}
+      >
+        <div className="mask" style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
+          <Container className="d-flex justify-content-center align-items-center h-100">
+            <div className="text-white">
+              <h1 className="mb-3">Welcome to BKLYN</h1>
+              <h4 className="mb-3">
+                add something here that invites user to start shoppping
+                "discover latest products..."
+              </h4>
+              <Button variant="outline-light" size="lg" href="#!" role="button">
+                Shop Now
+              </Button>
+            </div>
+          </Container>
+        </div>
+      </div>
+
+      {/* Featured Products */}
       <h1>Featured Products</h1>
       <div className="products">
         {loading ? (

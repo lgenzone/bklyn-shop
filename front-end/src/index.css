@@ -11,9 +11,22 @@ body {
   background-color: #4A4C43;
 }
 
+.cart-link {
+  color: white;
+}
+
+#basic-nav-dropdown {
+  color: white;
+}
+
+.nav-link {
+  color: white;
+}
+
 .brand {
   color: white;
 }
+
 
 .site-container {
   min-height: 100vh;
