@@ -103,17 +103,16 @@ function ProductScreen() {
             <ListGroup.Item>Price: ${product.price}</ListGroup.Item>
 
             <ListGroup.Item>
-              Description:
               <p>{product.description}</p>
             </ListGroup.Item>
 
               <ListGroup.Item>
-              Usage Instructions:
+              <strong>How to Use:</strong>
               <p>{product.instructions}</p>
             </ListGroup.Item>
 
             <ListGroup.Item>
-              Ingredients:
+              <strong>Ingredients:</strong>
               <p>{product.ingredients}</p>
             </ListGroup.Item>
 
