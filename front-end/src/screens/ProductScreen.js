@@ -106,6 +106,18 @@ function ProductScreen() {
               Description:
               <p>{product.description}</p>
             </ListGroup.Item>
+
+              <ListGroup.Item>
+              Usage Instructions:
+              <p>{product.instructions}</p>
+            </ListGroup.Item>
+
+            <ListGroup.Item>
+              Ingredients:
+              <p>{product.ingredients}</p>
+            </ListGroup.Item>
+
+
           </ListGroup>
         </Col>
 

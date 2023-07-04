@@ -20,6 +20,8 @@ import PlaceOrderScreen from './screens/PlaceOrderScreen';
 import OrderScreen from './screens/OrderScreen';
 import OrderHistoryScreen from './screens/OrderHistoryScreen';
 import ProfileScreen from './screens/ProfileScreen';
+import CleansersScreen from './screens/CleansersScreen';
+import PeptidesScreen from './screens/PeptidesScreen';
 
 
 function App() {
@@ -44,6 +46,19 @@ function App() {
               <LinkContainer to="/">
                 <Navbar.Brand className="brand">bklyn</Navbar.Brand>
               </LinkContainer>
+
+              <NavDropdown title="Shop" id="shop-nav-dropdown">
+              <LinkContainer to="/cleansers">
+                <NavDropdown.Item>Cleansers & Scrubs</NavDropdown.Item>
+              </LinkContainer>
+              <LinkContainer to="/peptides">
+                <NavDropdown.Item>Peptides</NavDropdown.Item>
+              </LinkContainer>
+              <LinkContainer to="/other">
+                <NavDropdown.Item>Other</NavDropdown.Item>
+              </LinkContainer>
+            </NavDropdown>
+
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto w-100 justify-content-end">
@@ -96,6 +111,8 @@ function App() {
               <Route path="/shipping" element={<ShippingAddressScreen />} />
               <Route path="/payment" element={<PaymentMethodScreen />} />
               <Route path="/" element={<HomeScreen />} />
+              <Route path="/cleansers" element={<CleansersScreen />} />
+              <Route path="/peptides" element={<PeptidesScreen />} />
             </Routes>
           </Container>
         </main>
