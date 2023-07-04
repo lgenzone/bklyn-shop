@@ -25,6 +25,8 @@ import PeptidesScreen from './screens/PeptidesScreen';
 import TonersScreen from './screens/TonersScreen';
 import SerumsScreen from './screens/SerumsScreen';
 import MasksScreen from './screens/MasksScreen';
+import AntiAgingScreen from './screens/AntiAgingScreen';
+import AcneControlScreen from './screens/AcneControlScreen';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -50,6 +52,12 @@ function App() {
               </LinkContainer>
 
               <NavDropdown title="Shop" id="shop-nav-dropdown">
+              <LinkContainer to="/antiaging">
+              <NavDropdown.Item>Anti-Aging</NavDropdown.Item>
+            </LinkContainer>
+            <LinkContainer to="/acnecontrol">
+            <NavDropdown.Item>Acne Control</NavDropdown.Item>
+          </LinkContainer>
                 <LinkContainer to="/cleansers">
                   <NavDropdown.Item>Cleansers & Scrubs</NavDropdown.Item>
                 </LinkContainer>
@@ -122,6 +130,8 @@ function App() {
               <Route path="/shipping" element={<ShippingAddressScreen />} />
               <Route path="/payment" element={<PaymentMethodScreen />} />
               <Route path="/" element={<HomeScreen />} />
+              <Route path="/antiaging" element={<AntiAgingScreen />} />
+              <Route path="/acnecontrol" element={<AcneControlScreen />} />
               <Route path="/cleansers" element={<CleansersScreen />} />
               <Route path="/peptides" element={<PeptidesScreen />} />
               <Route path="/toners" element={<TonersScreen />} />

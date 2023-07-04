@@ -21,7 +21,7 @@ const reducer = (state, action) => {
   }
 };
 
-function AntiAgingScreen() {
+function AcneControlScreen() {
   const [{ loading, error, products }, dispatch] = useReducer(reducer, {
     products: [],
     loading: true,
@@ -33,8 +33,8 @@ function AntiAgingScreen() {
       dispatch({ type: 'FETCH_REQUEST' });
       try {
         const result = await axios.get('/api/products');
-        const antiAging = result.data.filter((product) => product.isAntiAging);
-        dispatch({ type: 'FETCH_SUCCESS', payload: antiAging });
+        const acneControl = result.data.filter((product) => product.isAcneControl);
+        dispatch({ type: 'FETCH_SUCCESS', payload: acneControl });
       } catch (error) {
         dispatch({ type: 'FETCH_FAIL', payload: error.message });
       }
@@ -45,10 +45,10 @@ function AntiAgingScreen() {
   return (
     <div>
       <Helmet>
-        <title>Anti-Aging - bklyn</title>
+        <title>Acne Control - bklyn</title>
       </Helmet>
-      <h1>Anti-Aging</h1>
-      <h5>Write something about anti-aging products here.</h5>
+      <h1>Acne Control</h1>
+      <h5>Write something about acne control products here.</h5>
       <div className="products">
         {loading ? (
           <LoadingBox />
@@ -68,4 +68,4 @@ function AntiAgingScreen() {
   );
 }
 
-export default AntiAgingScreen;
+export default AcneControlScreen;
