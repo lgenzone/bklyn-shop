@@ -27,6 +27,7 @@ import SerumsScreen from './screens/SerumsScreen';
 import MasksScreen from './screens/MasksScreen';
 import AntiAgingScreen from './screens/AntiAgingScreen';
 import AcneControlScreen from './screens/AcneControlScreen';
+import EyeTreatmentsScreen from './screens/EyeTreatmentsScreen';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -52,12 +53,15 @@ function App() {
               </LinkContainer>
 
               <NavDropdown title="Shop" id="shop-nav-dropdown">
-              <LinkContainer to="/antiaging">
-              <NavDropdown.Item>Anti-Aging</NavDropdown.Item>
-            </LinkContainer>
-            <LinkContainer to="/acnecontrol">
-            <NavDropdown.Item>Acne Control</NavDropdown.Item>
-          </LinkContainer>
+                <LinkContainer to="/antiaging">
+                  <NavDropdown.Item>Anti-Aging</NavDropdown.Item>
+                </LinkContainer>
+                <LinkContainer to="/acnecontrol">
+                  <NavDropdown.Item>Acne Control</NavDropdown.Item>
+                </LinkContainer>
+                <LinkContainer to="/eyetreatments">
+                  <NavDropdown.Item>Eye Treatments</NavDropdown.Item>
+                </LinkContainer>
                 <LinkContainer to="/cleansers">
                   <NavDropdown.Item>Cleansers & Scrubs</NavDropdown.Item>
                 </LinkContainer>
@@ -71,8 +75,8 @@ function App() {
                   <NavDropdown.Item>Serums</NavDropdown.Item>
                 </LinkContainer>
                 <LinkContainer to="/masks">
-                <NavDropdown.Item>Masks</NavDropdown.Item>
-              </LinkContainer>
+                  <NavDropdown.Item>Masks</NavDropdown.Item>
+                </LinkContainer>
                 <LinkContainer to="/other">
                   <NavDropdown.Item>Other</NavDropdown.Item>
                 </LinkContainer>
@@ -132,6 +136,7 @@ function App() {
               <Route path="/" element={<HomeScreen />} />
               <Route path="/antiaging" element={<AntiAgingScreen />} />
               <Route path="/acnecontrol" element={<AcneControlScreen />} />
+              <Route path="/eyetreatments" element={<EyeTreatmentsScreen />} />
               <Route path="/cleansers" element={<CleansersScreen />} />
               <Route path="/peptides" element={<PeptidesScreen />} />
               <Route path="/toners" element={<TonersScreen />} />
