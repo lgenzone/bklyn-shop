@@ -28,6 +28,7 @@ import MasksScreen from './screens/MasksScreen';
 import AntiAgingScreen from './screens/AntiAgingScreen';
 import AcneControlScreen from './screens/AcneControlScreen';
 import EyeTreatmentsScreen from './screens/EyeTreatmentsScreen';
+import OtherScreen from './screens/OtherScreen';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -142,6 +143,7 @@ function App() {
               <Route path="/toners" element={<TonersScreen />} />
               <Route path="/serums" element={<SerumsScreen />} />
               <Route path="/masks" element={<MasksScreen />} />
+              <Route path="/other" element={<OtherScreen />} />
             </Routes>
           </Container>
         </main>
