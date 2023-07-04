@@ -33,7 +33,9 @@ function SerumsScreen() {
       dispatch({ type: 'FETCH_REQUEST' });
       try {
         const result = await axios.get('/api/products');
-        const serums = result.data.filter((product) => product.category === 'Serums');
+        const serums = result.data.filter(
+          (product) => product.category === 'Serums'
+        );
         dispatch({ type: 'FETCH_SUCCESS', payload: serums });
       } catch (error) {
         dispatch({ type: 'FETCH_FAIL', payload: error.message });
@@ -45,24 +47,24 @@ function SerumsScreen() {
   return (
     <div>
       <Helmet>
-        <title>Serums - bklyn</title>
+        <title>Serums- bklyn</title>
       </Helmet>
-      <h1>Serums</h1>
-      <div className="products">
-        {loading ? (
-          <LoadingBox />
-        ) : error ? (
-          <MessageBox variant="danger">{error}</MessageBox>
-        ) : (
-          <Row>
-            {products.map((product) => (
-              <Col key={product.slug} sm={6} md={4} lg={3} className="mb-3">
+      <Container>
+        <h1>Serums</h1>
+        <Row xs={1} sm={2} md={3} lg={4} xl={5} className="g-3">
+          {loading ? (
+            <LoadingBox />
+          ) : error ? (
+            <MessageBox variant="danger">{error}</MessageBox>
+          ) : (
+            products.map((product) => (
+              <Col key={product.slug}>
                 <Product product={product} />
               </Col>
-            ))}
-          </Row>
-        )}
-      </div>
+            ))
+          )}
+        </Row>
+      </Container>
     </div>
   );
 }

@@ -38,7 +38,9 @@ function HomeScreen() {
       dispatch({ type: 'FETCH_REQUEST' });
       try {
         const result = await axios.get('/api/products');
-        const featuredProducts = result.data.filter((product) => product.isFeatured);
+        const featuredProducts = result.data.filter(
+          (product) => product.isFeatured
+        );
         dispatch({ type: 'FETCH_SUCCESS', payload: featuredProducts });
       } catch (error) {
         dispatch({ type: 'FETCH_FAIL', payload: error.message });
@@ -59,28 +61,35 @@ function HomeScreen() {
           backgroundImage:
             "url('https://images.unsplash.com/photo-1612817288484-6f916006741a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')",
           height: '400px',
-          
         }}
-      >
-      </div>
+      ></div>
 
       {/* Featured Products */}
-      <h1>Featured Products</h1>
-      <div className="products">
+      <h2 className="text-center">Featured Products</h2>
+      <Container>
         {loading ? (
           <LoadingBox />
         ) : error ? (
           <MessageBox variant="danger">{error}</MessageBox>
         ) : (
-          <Row>
+          <Row
+            xs={1}
+            sm={2}
+            md={3}
+            lg={4}
+            xl={5}
+            className="g-3 justify-content-center"
+          >
             {products.map((product) => (
-              <Col key={product.slug} sm={6} md={4} lg={3} className="mb-3">
-                <Product product={product}></Product>
+              <Col key={product.slug}>
+                <div className="card">
+                  <Product product={product} />
+                </div>
               </Col>
             ))}
           </Row>
         )}
-      </div>
+      </Container>
     </div>
   );
 }

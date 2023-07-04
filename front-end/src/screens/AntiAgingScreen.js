@@ -47,23 +47,23 @@ function AntiAgingScreen() {
       <Helmet>
         <title>Anti-Aging - bklyn</title>
       </Helmet>
-      <h1>Anti-Aging</h1>
-      <h5>Write something about anti-aging products here.</h5>
-      <div className="products">
-        {loading ? (
-          <LoadingBox />
-        ) : error ? (
-          <MessageBox variant="danger">{error}</MessageBox>
-        ) : (
-          <Row>
-            {products.map((product) => (
-              <Col key={product.slug} sm={6} md={4} lg={3} className="mb-3">
+      <Container>
+        <h1>Anti-Aging</h1>
+        <h5>Write something about anti-aging products here.</h5>
+        <Row xs={1} sm={2} md={3} lg={4} xl={5} className="g-3">
+          {loading ? (
+            <LoadingBox />
+          ) : error ? (
+            <MessageBox variant="danger">{error}</MessageBox>
+          ) : (
+            products.map((product) => (
+              <Col key={product.slug}>
                 <Product product={product} />
               </Col>
-            ))}
-          </Row>
-        )}
-      </div>
+            ))
+          )}
+        </Row>
+      </Container>
     </div>
   );
 }

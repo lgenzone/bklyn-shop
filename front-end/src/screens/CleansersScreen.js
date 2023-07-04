@@ -33,7 +33,9 @@ function CleansersScreen() {
       dispatch({ type: 'FETCH_REQUEST' });
       try {
         const result = await axios.get('/api/products');
-        const cleansers = result.data.filter((product) => product.category === 'Cleansers');
+        const cleansers = result.data.filter(
+          (product) => product.category === 'Cleansers'
+        );
         dispatch({ type: 'FETCH_SUCCESS', payload: cleansers });
       } catch (error) {
         dispatch({ type: 'FETCH_FAIL', payload: error.message });
@@ -45,24 +47,24 @@ function CleansersScreen() {
   return (
     <div>
       <Helmet>
-        <title>Cleansers - bklyn</title>
+        <title>Cleansers- bklyn</title>
       </Helmet>
-      <h1>Cleansers</h1>
-      <div className="products">
-        {loading ? (
-          <LoadingBox />
-        ) : error ? (
-          <MessageBox variant="danger">{error}</MessageBox>
-        ) : (
-          <Row>
-            {products.map((product) => (
-              <Col key={product.slug} sm={6} md={4} lg={3} className="mb-3">
+      <Container>
+        <h1>Cleansers</h1>
+        <Row xs={1} sm={2} md={3} lg={4} xl={5} className="g-3">
+          {loading ? (
+            <LoadingBox />
+          ) : error ? (
+            <MessageBox variant="danger">{error}</MessageBox>
+          ) : (
+            products.map((product) => (
+              <Col key={product.slug}>
                 <Product product={product} />
               </Col>
-            ))}
-          </Row>
-        )}
-      </div>
+            ))
+          )}
+        </Row>
+      </Container>
     </div>
   );
 }

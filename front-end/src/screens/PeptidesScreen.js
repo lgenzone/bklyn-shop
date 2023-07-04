@@ -2,6 +2,7 @@ import { useEffect, useReducer } from 'react';
 import axios from 'axios';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
 import Product from '../components/Product';
 import { Helmet } from 'react-helmet-async';
 import LoadingBox from '../components/LoadingBox';
@@ -44,24 +45,24 @@ function PeptidesScreen() {
   return (
     <div>
       <Helmet>
-        <title>Peptides - bklyn</title>
+        <title>Peptides- bklyn</title>
       </Helmet>
-      <h1>Peptides</h1>
-      <div className="products">
-        {loading ? (
-          <LoadingBox />
-        ) : error ? (
-          <MessageBox variant="danger">{error}</MessageBox>
-        ) : (
-          <Row>
-            {products.map((product) => (
-              <Col key={product.slug} sm={6} md={4} lg={3} className="mb-3">
+      <Container>
+        <h1>Peptides</h1>
+        <Row xs={1} sm={2} md={3} lg={4} xl={5} className="g-3">
+          {loading ? (
+            <LoadingBox />
+          ) : error ? (
+            <MessageBox variant="danger">{error}</MessageBox>
+          ) : (
+            products.map((product) => (
+              <Col key={product.slug}>
                 <Product product={product} />
               </Col>
-            ))}
-          </Row>
-        )}
-      </div>
+            ))
+          )}
+        </Row>
+      </Container>
     </div>
   );
 }

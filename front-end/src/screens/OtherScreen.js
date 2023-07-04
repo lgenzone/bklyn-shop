@@ -33,7 +33,9 @@ function OtherScreen() {
       dispatch({ type: 'FETCH_REQUEST' });
       try {
         const result = await axios.get('/api/products');
-        const other = result.data.filter((product) => product.category === 'Other');
+        const other = result.data.filter(
+          (product) => product.category === 'Other'
+        );
         dispatch({ type: 'FETCH_SUCCESS', payload: other });
       } catch (error) {
         dispatch({ type: 'FETCH_FAIL', payload: error.message });
@@ -45,24 +47,24 @@ function OtherScreen() {
   return (
     <div>
       <Helmet>
-        <title>Other/Misc - bklyn</title>
+        <title>Other- bklyn</title>
       </Helmet>
-      <h1>Other/Misc</h1>
-      <div className="products">
-        {loading ? (
-          <LoadingBox />
-        ) : error ? (
-          <MessageBox variant="danger">{error}</MessageBox>
-        ) : (
-          <Row>
-            {products.map((product) => (
-              <Col key={product.slug} sm={6} md={4} lg={3} className="mb-3">
+      <Container>
+        <h1>Other</h1>
+        <Row xs={1} sm={2} md={3} lg={4} xl={5} className="g-3">
+          {loading ? (
+            <LoadingBox />
+          ) : error ? (
+            <MessageBox variant="danger">{error}</MessageBox>
+          ) : (
+            products.map((product) => (
+              <Col key={product.slug}>
                 <Product product={product} />
               </Col>
-            ))}
-          </Row>
-        )}
-      </div>
+            ))
+          )}
+        </Row>
+      </Container>
     </div>
   );
 }

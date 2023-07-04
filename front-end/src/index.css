@@ -37,6 +37,11 @@ main {
   background-color: #DFE2DF;
 }
 
+.card {
+  height: 100%;
+  overflow: auto;
+}
+
 .btn-primary {
   background-color: #738277;
   color: black;
