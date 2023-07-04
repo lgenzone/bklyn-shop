@@ -23,6 +23,7 @@ import ProfileScreen from './screens/ProfileScreen';
 import CleansersScreen from './screens/CleansersScreen';
 import PeptidesScreen from './screens/PeptidesScreen';
 import TonersScreen from './screens/TonersScreen';
+import SerumsScreen from './screens/SerumsScreen';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -56,6 +57,9 @@ function App() {
                 </LinkContainer>
                 <LinkContainer to="/toners">
                   <NavDropdown.Item>Toners</NavDropdown.Item>
+                </LinkContainer>
+                <LinkContainer to="/serums">
+                  <NavDropdown.Item>Serums</NavDropdown.Item>
                 </LinkContainer>
                 <LinkContainer to="/other">
                   <NavDropdown.Item>Other</NavDropdown.Item>
@@ -117,6 +121,7 @@ function App() {
               <Route path="/cleansers" element={<CleansersScreen />} />
               <Route path="/peptides" element={<PeptidesScreen />} />
               <Route path="/toners" element={<TonersScreen />} />
+              <Route path="/serums" element={<SerumsScreen />} />
             </Routes>
           </Container>
         </main>
