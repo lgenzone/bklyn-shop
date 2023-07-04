@@ -22,7 +22,7 @@ import OrderHistoryScreen from './screens/OrderHistoryScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import CleansersScreen from './screens/CleansersScreen';
 import PeptidesScreen from './screens/PeptidesScreen';
-
+import TonersScreen from './screens/TonersScreen';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -33,7 +33,7 @@ function App() {
     localStorage.removeItem('userInfo');
     localStorage.removeItem('shippingAddress');
     localStorage.removeItem('paymentMethod');
-    window.location.href = "/signin";
+    window.location.href = '/signin';
   };
 
   return (
@@ -48,16 +48,19 @@ function App() {
               </LinkContainer>
 
               <NavDropdown title="Shop" id="shop-nav-dropdown">
-              <LinkContainer to="/cleansers">
-                <NavDropdown.Item>Cleansers & Scrubs</NavDropdown.Item>
-              </LinkContainer>
-              <LinkContainer to="/peptides">
-                <NavDropdown.Item>Peptides</NavDropdown.Item>
-              </LinkContainer>
-              <LinkContainer to="/other">
-                <NavDropdown.Item>Other</NavDropdown.Item>
-              </LinkContainer>
-            </NavDropdown>
+                <LinkContainer to="/cleansers">
+                  <NavDropdown.Item>Cleansers & Scrubs</NavDropdown.Item>
+                </LinkContainer>
+                <LinkContainer to="/peptides">
+                  <NavDropdown.Item>Peptides</NavDropdown.Item>
+                </LinkContainer>
+                <LinkContainer to="/toners">
+                  <NavDropdown.Item>Toners</NavDropdown.Item>
+                </LinkContainer>
+                <LinkContainer to="/other">
+                  <NavDropdown.Item>Other</NavDropdown.Item>
+                </LinkContainer>
+              </NavDropdown>
 
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
@@ -113,6 +116,7 @@ function App() {
               <Route path="/" element={<HomeScreen />} />
               <Route path="/cleansers" element={<CleansersScreen />} />
               <Route path="/peptides" element={<PeptidesScreen />} />
+              <Route path="/toners" element={<TonersScreen />} />
             </Routes>
           </Container>
         </main>
