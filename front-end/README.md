@@ -1,70 +1,111 @@
-# Getting Started with Create React App
+# bklyn E-COMMERCE Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+bklyn-shop is an e-commerce site designed for a small business owner who sells skin products. This application allows users to browse and purchase skin products, create user accounts, manage their account information, place orders, and view order history. The application supports payment processing through PayPal and Stripe. The site is currently a work in progress, with placeholder images being used for products. In the future, the business owner will provide actual product photos, and additional features such as a reviews component will be implemented. Styling updates will also be made to enhance the user interface.
 
-## Available Scripts
+## Installation 
 
-In the project directory, you can run:
+Follow the link to access the deployed application ~INSERT LINK~
 
-### `npm start`
+To run the application locally, please follow these steps:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Clone the repository from GitHub:
+```
+git clone git@github.com:lgenzone/bklyn-shop.git
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. Navigate to the project directory 
+```
+cd bklyn-shop
+```
 
-### `npm test`
+3. Install the dependencies for both the backend and frontend:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+##### Install backend dependencies
+```
+cd back-end
+npm install
+```
+##### Install frontend dependencies
+```
+cd ../front-end
+npm install
+```
 
-### `npm run build`
+4. Create Environment Variables 
+* Create a .env file in the backend directory.
+* Set the following environment variables in the .env file:
+```
+JWT_SECRET=<your_jwt_secret>
+MONGODB_URI=<your_mongodb_connection_string>
+STRIPE_SECRET_KEY=<your_stripe_secret_key>
+PAYPAL_CLIENT_ID=<your_paypal_client_id>
+```
+5. Pull in Route Data:
+```
+cd ../back-end
+node routes/orderRoutes.js
+node routes/productRoutes.js
+node routes/seedRoutes.js
+node routes/userRoutes.js
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+6. Start the Application: 
+##### Start the backend server
+```
+node server.js
+```
+##### Start the frontend development server
+```
+cd ../front-end
+npm start
+```
+7. Start the Application 
+ 
+If the application doesn't launch automatically, open your browser and visit `http://localhost:3000`.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Features 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* User Authentication: Users can create accounts, log in, and log out. Account information, such as name, email, and address, can be managed by the user.
+ * Product Listing: Users can browse and view all available skin products provided by the bklyn store. Each product displays its name, price, and description.
+* Product Details: Users can click on a product to view detailed information about it, including additional images, product variants, and reviews (to be implemented).
+* Shopping Cart: Users can add products to their shopping cart, view the cart, and update or remove items as needed.
+* Order Placement: Users can proceed to checkout, where they can select their preferred payment method (PayPal or Stripe) and complete the order.
+* Order History: Users can view their order history, including the details of each past order.
+* Payment Processing: The application supports payment processing through PayPal and Stripe, allowing users to securely complete their orders.
+* Reviews Component (To be implemented): Users will be able to leave reviews for products and view reviews left by other customers.
 
-### `npm run eject`
+## Technologies Used 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The bklyn-shop e-commerce application is built using the MERN stack, which includes the following technologies:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* MongoDB: A NoSQL database used to store product information, user data, and order details.
+* Express: A web framework for Node.js used to build the backend API.
+* React: A JavaScript library used for building user interfaces.
+* Node.js: A JavaScript runtime environment used for running the backend server.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Future Enhancements
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* Product Images: Implement actual product photos provided by the business owner, replacing the current placeholder images.
+* Reviews Component: Add the ability for users to leave reviews for products and view reviews left by other customers.
+* Updated UI: Improve the styling and layout of the application to create a visually appealing and user-friendly interface.
 
-## Learn More
+## License 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This project is licensed under the MIT license.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Questions 
 
-### Code Splitting
+For questions related to this project, please reach out to me via email:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+lgenzone@icloud.com
 
-### Analyzing the Bundle Size
+## Screenshots
+![Screen Shot 2023-07-10 at 10 06 22 PM](https://github.com/lgenzone/bklyn-shop/assets/113480175/b59e314d-02b4-4149-86a5-8dd7a1cef0aa)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![Screen Shot 2023-07-10 at 10 18 29 PM](https://github.com/lgenzone/bklyn-shop/assets/113480175/1971b58c-0278-45f4-9195-9c1b0b848a61)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+![Screen Shot 2023-07-10 at 10 06 54 PM](https://github.com/lgenzone/bklyn-shop/assets/113480175/2cb078de-a6dc-45c0-9afd-4503e5da752f)
 
-### Advanced Configuration
+![Screen Shot 2023-07-10 at 10 15 00 PM](https://github.com/lgenzone/bklyn-shop/assets/113480175/5fd88cdf-5a97-46f2-b272-6d00a46b467c)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
