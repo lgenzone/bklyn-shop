@@ -7,6 +7,7 @@ import productRouter from './routes/productRoutes.js';
 import userRouter from './routes/userRoutes.js';
 import orderRouter from './routes/orderRoutes.js';
 
+// fetch variables in .env file
 dotenv.config();
 
 mongoose
@@ -19,7 +20,7 @@ mongoose
   });
 
 const app = express();
-
+// test 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); 
 
