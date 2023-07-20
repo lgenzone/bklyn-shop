@@ -4,7 +4,7 @@ bklyn-shop is an e-commerce site designed for a small business owner who sells s
 
 ## Installation 
 
-Follow the link to access the deployed application ~INSERT LINK~
+[Click here to open Deployed Application](https://bklyn-shop-app-7862908fb146.herokuapp.com/)
 
 To run the application locally, please follow these steps:
 
