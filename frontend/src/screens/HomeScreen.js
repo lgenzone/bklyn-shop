@@ -11,7 +11,7 @@ import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import heroImage from '../images/good-skin-club-unsplash.png';
 
-
+     
 const reducer = (state, action) => {
   switch (action.type) {
     case 'FETCH_REQUEST':
@@ -57,6 +57,8 @@ function HomeScreen() {
         <title>bklyn</title>
       </Helmet>
       <h2>...hey beautiful</h2>
+      
+
       {/* Hero */}
       <div
         className="p-5 text-center bg-image rounded-3 hero"

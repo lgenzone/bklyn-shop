@@ -29,6 +29,7 @@ import AntiAgingScreen from './screens/AntiAgingScreen';
 import AcneControlScreen from './screens/AcneControlScreen';
 import EyeTreatmentsScreen from './screens/EyeTreatmentsScreen';
 import OtherScreen from './screens/OtherScreen';
+import Logo from './images/logo.png';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -50,8 +51,18 @@ function App() {
           <Navbar className="navbar" expand="lg">
             <Container>
               <LinkContainer to="/">
-                <Navbar.Brand className="brand">bklyn</Navbar.Brand>
+                <Navbar.Brand className="brand">
+                <img
+                  src={Logo}
+                  alt="BKLYN"
+                  className="logo"
+                  />
+                </Navbar.Brand>
               </LinkContainer>
+
+
+              <Navbar.Toggle aria-controls="basic-navbar-nav" />
+              <Navbar.Collapse id="basic-navbar-nav">
 
               <NavDropdown title="Shop" id="shop-nav-dropdown">
                 <LinkContainer to="/antiaging">
@@ -82,10 +93,7 @@ function App() {
                   <NavDropdown.Item>Other</NavDropdown.Item>
                 </LinkContainer>
               </NavDropdown>
-
-              <Navbar.Toggle aria-controls="basic-navbar-nav" />
-              <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="me-auto w-100 justify-content-end">
+                <Nav className="">
                   <Link to="/cart" className="nav-link cart-link">
                     Cart
                     {cart.cartItems.length > 0 && (
