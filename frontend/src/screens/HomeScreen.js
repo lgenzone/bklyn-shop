@@ -9,6 +9,8 @@ import Product from '../components/Product';
 import { Helmet } from 'react-helmet-async';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
+import heroImage from '../images/good-skin-club-unsplash.png';
+
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -54,18 +56,20 @@ function HomeScreen() {
       <Helmet>
         <title>bklyn</title>
       </Helmet>
+      <h2>...hey beautiful</h2>
       {/* Hero */}
       <div
-        className="p-5 text-center bg-image rounded-3"
+        className="p-5 text-center bg-image rounded-3 hero"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1612817288484-6f916006741a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')",
+            `url(${heroImage})`,
           height: '400px',
+          backgroundSize: '100% 100%',
+          backgroundSize: 'cover',
         }}
       ></div>
 
       {/* Featured Products */}
-      <h2 className="text-center">Featured Products</h2>
       <Container>
         {loading ? (
           <LoadingBox />
