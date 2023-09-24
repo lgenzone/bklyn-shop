@@ -88,7 +88,7 @@ function HomeScreen() {
           >
             {products.map((product) => (
               <Col key={product.slug}>
-                <div className="card">
+                <div className="card mt-5">
                   <Product product={product} />
                 </div>
               </Col>

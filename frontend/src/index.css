@@ -9,7 +9,7 @@ body {
 
 .navbar {
   background-color: #949E94;
-  height: 50%;
+  height: 10rem;
 }
 
 .cart-link {
@@ -29,7 +29,7 @@ body {
 }
 
 .logo {
-  height: 400px;
+  height: 100px;
 }
 
 .site-container {
