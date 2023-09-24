@@ -568,7 +568,7 @@ const data = {
             name: 'Healing Cream',
             slug: 'healing-cream',
             category: 'Other',
-            image: 'peptide-ph.jpeg',
+            image: '/images/peptide-ph.jpeg',
             price: 80, 
             countInStock: 2,
             brand: 'bklyn',
