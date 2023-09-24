@@ -52,47 +52,41 @@ function App() {
             <Container>
               <LinkContainer to="/">
                 <Navbar.Brand className="brand">
-                <img
-                  src={Logo}
-                  alt="BKLYN"
-                  className="logo"
-                  />
+                  <img src={Logo} alt="BKLYN" className="logo" />
                 </Navbar.Brand>
               </LinkContainer>
 
-
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
-
-              <NavDropdown title="Shop" id="shop-nav-dropdown">
-                <LinkContainer to="/antiaging">
-                  <NavDropdown.Item>Anti-Aging</NavDropdown.Item>
-                </LinkContainer>
-                <LinkContainer to="/acnecontrol">
-                  <NavDropdown.Item>Acne Control</NavDropdown.Item>
-                </LinkContainer>
-                <LinkContainer to="/eyetreatments">
-                  <NavDropdown.Item>Eye Treatments</NavDropdown.Item>
-                </LinkContainer>
-                <LinkContainer to="/cleansers">
-                  <NavDropdown.Item>Cleansers & Scrubs</NavDropdown.Item>
-                </LinkContainer>
-                <LinkContainer to="/peptides">
-                  <NavDropdown.Item>Peptides</NavDropdown.Item>
-                </LinkContainer>
-                <LinkContainer to="/toners">
-                  <NavDropdown.Item>Toners</NavDropdown.Item>
-                </LinkContainer>
-                <LinkContainer to="/serums">
-                  <NavDropdown.Item>Serums</NavDropdown.Item>
-                </LinkContainer>
-                <LinkContainer to="/masks">
-                  <NavDropdown.Item>Masks</NavDropdown.Item>
-                </LinkContainer>
-                <LinkContainer to="/other">
-                  <NavDropdown.Item>Other</NavDropdown.Item>
-                </LinkContainer>
-              </NavDropdown>
+                <NavDropdown title="Shop" id="shop-nav-dropdown">
+                  <LinkContainer to="/antiaging">
+                    <NavDropdown.Item>Anti-Aging</NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer to="/acnecontrol">
+                    <NavDropdown.Item>Acne Control</NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer to="/eyetreatments">
+                    <NavDropdown.Item>Eye Treatments</NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer to="/cleansers">
+                    <NavDropdown.Item>Cleansers & Scrubs</NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer to="/peptides">
+                    <NavDropdown.Item>Peptides</NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer to="/toners">
+                    <NavDropdown.Item>Toners</NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer to="/serums">
+                    <NavDropdown.Item>Serums</NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer to="/masks">
+                    <NavDropdown.Item>Masks</NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer to="/other">
+                    <NavDropdown.Item>Other</NavDropdown.Item>
+                  </LinkContainer>
+                </NavDropdown>
                 <Nav className="">
                   <Link to="/cart" className="nav-link cart-link">
                     Cart
