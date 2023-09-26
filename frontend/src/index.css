@@ -7,17 +7,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.site-container {
+  min-height: 100vh;
+}
+
 .navbar {
   background-color: #949E94;
   height: 10rem;
-}
-
-.cart-link {
-  color: white;
-}
-
-#basic-nav-dropdown {
-  color: white;
 }
 
 .nav-link {
@@ -26,14 +22,19 @@ body {
 
 .brand {
   color: white;
+  
 }
 
 .logo {
-  height: 100px;
+  height: 120px;
 }
 
-.site-container {
-  min-height: 100vh;
+.dropdown-menu {
+  width: 50%;
+}
+
+.shop-nav-dropdown {
+  width: 30%;
 }
 
 main {

@@ -1,14 +1,7 @@
 import { useEffect, useReducer } from 'react';
-//import { Link } from "react-router-dom";
 import axios from 'axios';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
-import Button from 'react-bootstrap/Button';
-import Product from '../components/Product';
-
 import Featured from '../components/Featured';
-
 import { Helmet } from 'react-helmet-async';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
@@ -58,7 +51,7 @@ function HomeScreen() {
       <Helmet>
         <title>bklyn</title>
       </Helmet>
-      <h2>...hey beautiful</h2>
+    
 
       {/* Hero */}
       <div
