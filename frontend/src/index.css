@@ -7,6 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 .site-container {
   min-height: 100vh;
 }
@@ -98,4 +99,11 @@ main {
 .checkout-steps > div.active {
   border-bottom: 0.2rem solid #949E94;
   color: #949E94;
+}
+
+/* small screens (mobile view) */
+@media (max-width: 768px) {
+  .navbar {
+    height: 25%; 
+  }
 }
