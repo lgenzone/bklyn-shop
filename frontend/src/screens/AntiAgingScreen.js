@@ -48,8 +48,8 @@ function AntiAgingScreen() {
         <title>Anti-Aging - bklyn</title>
       </Helmet>
       <Container>
-        <h1>Anti-Aging</h1>
-        <h5>Write something about anti-aging products here.</h5>
+        <h1 className="text-center pt-1">Anti-Aging</h1>
+        <h5 className="text-center pb-3">embrace your timeless beauty and turn back the clock with our trusted anti-aging skincare solutions.</h5>
         <Row xs={1} sm={2} md={3} lg={4} xl={5} className="g-3">
           {loading ? (
             <LoadingBox />

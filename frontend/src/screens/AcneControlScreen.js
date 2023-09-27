@@ -47,11 +47,11 @@ function AcneControlScreen() {
   return (
     <div>
       <Helmet>
-        <title>Acne Control - bklyn</title>
+        <title>Acne-Control - bklyn</title>
       </Helmet>
       <Container>
-        <h1>Acne Control</h1>
-        <h5>Write something about acne control products here.</h5>
+        <h1 className="text-center pt-1">Acne-Control</h1>
+        <h5 className="text-center pb-3">say goodbye to blemishes and hello to clear, confident skin with our acne-control products</h5>
         <Row xs={1} sm={2} md={3} lg={4} xl={5} className="g-3">
           {loading ? (
             <LoadingBox />

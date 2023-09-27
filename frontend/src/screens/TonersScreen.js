@@ -50,7 +50,8 @@ function TonersScreen() {
         <title>Toners- bklyn</title>
       </Helmet>
       <Container>
-        <h1>Toners</h1>
+        <h1 className="text-center pt-1">Toners</h1>
+        <h5 className="text-center pb-3">..say something about toners</h5>
         <Row xs={1} sm={2} md={3} lg={4} xl={5} className="g-3">
           {loading ? (
             <LoadingBox />
