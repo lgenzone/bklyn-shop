@@ -1,4 +1,5 @@
 import { useEffect, useReducer } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Container from 'react-bootstrap/Container';
 import Featured from '../components/Featured';
@@ -56,7 +57,7 @@ function HomeScreen() {
       {/* Hero */}
       <header>
         <div
-          className="p-5 text-center bg-image"
+          className="text-center bg-image rounded-2"
           style={{
             backgroundImage: `url(${Hero})`,
             height: '30rem',
@@ -68,17 +69,29 @@ function HomeScreen() {
             alignItems: 'center',
           }}
         >
-          <div className="text-white">
-            <Button variant="outline-light" size="lg">
-              Shop Now
-            </Button>
+          {/* background overlay */}
+          <div
+            className="mask d-flex justify-content-center align-items-center rounded-2"
+            style={{
+              backgroundColor: 'rgba(0, 0, 0, 0.6)', // opacity
+              width: '100%', 
+              height: '100%', 
+            }}
+          >
+            <div className="text-white">
+              <Link to="/eyetreatments">
+                <Button variant="outline-light" size="lg">
+                  Shop Eye Treatments
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </header>
 
       {/* Hero */}
 
-      {/* Featured*/}
+      {/* Featured */}
       <Container>
         {loading ? (
           <LoadingBox />
