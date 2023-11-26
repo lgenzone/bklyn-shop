@@ -30,6 +30,7 @@ import AcneControlScreen from './screens/AcneControlScreen';
 import EyeTreatmentsScreen from './screens/EyeTreatmentsScreen';
 import OtherScreen from './screens/OtherScreen';
 import Logo from './images/logo.png';
+import Button from 'react-bootstrap/Button';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -43,13 +44,21 @@ function App() {
     window.location.href = '/signin';
   };
 
+  const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
+
   return (
     <BrowserRouter>
-      <div className="d-flex flex-column site-container">
+      <div>
         <ToastContainer position="bottom-center" limit={1} />
         <header>
           <Navbar className="navbar" expand="lg">
             <Container>
+              <Button
+                variant="dark"
+                onClick={() => setSidebarIsOpen(!sidebarIsOpen)}
+              >
+                <i className="fas fa-bars"></i>
+              </Button>
               <LinkContainer to="/">
                 <Navbar.Brand className="brand">
                   <img src={Logo} alt="BKLYN" className="logo" />
@@ -123,6 +132,7 @@ function App() {
             </Container>
           </Navbar>
         </header>
+        
         <main>
           <Container className="mt-2">
             <Routes>

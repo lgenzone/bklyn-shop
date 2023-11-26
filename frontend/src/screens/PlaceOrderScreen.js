@@ -91,7 +91,7 @@ export default function PlaceOrderScreen() {
       <h1 className="my-3">Preview Order</h1>
       <Row>
         <Col md={8}>
-          <Card className="mb-3" style={{ height: '20%' }}>
+          <Card className="mb-3" style={{ height: '30%' }}>
             <Card.Body>
               <Card.Title>Shipping</Card.Title>
               <Card.Text>
@@ -104,7 +104,7 @@ export default function PlaceOrderScreen() {
             </Card.Body>
           </Card>
 
-          <Card className="mb-3" style={{ height: '20%' }}>
+          <Card className="mb-3" style={{ height: '30%' }}>
             <Card.Body>
               <Card.Title>Payment</Card.Title>
               <Card.Text>
