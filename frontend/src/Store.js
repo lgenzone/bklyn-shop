@@ -47,6 +47,7 @@ function reducer(state, action) {
     case 'USER_SIGNIN':
       return { ...state, userInfo: action.payload };
     case 'USER_SIGNOUT':
+      console.log('USER_SIGNOUT action dispatched');
       return {
         ...state,
         userInfo: null,
